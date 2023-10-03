@@ -1,4 +1,7 @@
 Rails.application.configure do
+
+  config.hosts << "orange-space-tribble-66p6w7qv9j5259wp-3000.app.github.dev"
+  
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
