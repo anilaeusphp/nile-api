@@ -16,10 +16,8 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    if @book.destroy
+    if @book.destroy!
       render json: "Book has been deleted", status: :no_content
-    else
-      render :index, status: :unprocessable_entity
     end
   end
 
@@ -32,4 +30,6 @@ class BooksController < ApplicationController
   def set_book
     @book = Book.find(params[:id])
   end
+
+
 end
